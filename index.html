@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bellybutton Biodiversity</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">Dashboard</a>
+        <a class="navbar-brand" href="/html/about.html">About</a>
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4">Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-inline">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref"
+              >Test Subject ID:</label
+            >
+            <!-- <select id="selDataset"></select> -->
+            <select
+              class="custom-select my-1 mr-sm-2"
+              id="selDataset"
+              onchange="optionChanged(this.value)"
+            ></select>
+          </div>
+          <div class="card text-white bg-dark">
+            <div class="card-header">Demographic Info</div>
+            <div class="card-body">
+              <p id="sample-metadata" class="card-text text-white"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div id="bar"></div>
+        </div>
+
+        <div class="col-md-12">
+          <div id="gauge"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="bubble"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="charts.js"></script>
+  </body>
+</html>

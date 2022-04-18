@@ -1,0 +1,10 @@
+.jumbotron {
+  background-image: url("../img/bacteria-background.jpg");
+  text-align: center;
+  color: #fff;
+  margin-top: 0;
+}
+
+.navbar {
+  background-color: rgb(4, 8, 35);
+}
